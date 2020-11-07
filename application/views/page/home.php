@@ -2,9 +2,20 @@
 <br />
 <br />
 <div class="ui container">
-    <div class="ui segment">
-        <div className="ui header">
-            <h1>DATA DISTRIK</h1>
+    <img class="ui centered huge image" src="<?php echo base_url()?>assets/images/tools-logo.png" alt="">
+    <br />
+    <br />
+    <br />
+
+    <form class="ui massive form">
+        <div class="field">
+            <label></label>
+            <div class="one fields">
+                <input type="text" name="nama" autocomplete="off" placeholder="Cari Data Dengan Nama">
+            </div>
+            <div class="fields">
+                <button class="massive ui green button" type="submit" tabindex="0"><i class="icon search"></i>Search</button>
+            </div>
         </div>
-    </div>
+    </form>
 </div>

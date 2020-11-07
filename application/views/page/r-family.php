@@ -28,7 +28,7 @@
                         <a href="<?php echo base_url()?>Penduduk/create_family" class="ui button primary"><i class="icon plus circle"></i> Tambah Data Baru</a>
                     </div>
                     <div class="ten wide field">
-                        <input type="text" name="nama_kk" placeholder="Cari Data Berdasarkan Nama">
+                        <input type="text" name="nama_kk" autocomplete="off" placeholder="Cari Data Berdasarkan Nama">
                     </div>
                     <div class="two wide field">
                         <input type="submit" class="ui button success" value="Temukan">

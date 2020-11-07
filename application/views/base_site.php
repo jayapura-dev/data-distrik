@@ -14,10 +14,10 @@
                     <img src="<?php echo base_url()?>assets/images/logo-jdev.png" alt="logo" />
                 </div>
                 <li class="active item">
-                    <a href="<?php echo base_url()?>">Beranda</a>
+                    <a href="<?php echo base_url()?>"> <i class="icon home"></i> Home</a>
                 </li>
                 <li class="item">
-                    <a href="<?php echo base_url()?>Penduduk/family">Data</a>
+                    <a href="<?php echo base_url()?>Penduduk/family"> <i class="icon database"></i> Data</a>
                 </li>
             
                 <div class="ui simple dropdown item">
