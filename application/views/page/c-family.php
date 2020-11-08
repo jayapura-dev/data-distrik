@@ -19,7 +19,7 @@
                 <label>Nama Kepala Keluarga</label>
                 <div class="three fields">
                     <div class="field">
-                        <input type="hidden" name="id_distrik" value="4">
+                        <input type="hidden" name="id_distrik" value="<?php echo $id_distrik ?>">
                         <input type="text" name="nama_kk" placeholder="Nama Lengkap Kepala Keluarga" required="true">  
                     </div>
                     <div class="field">

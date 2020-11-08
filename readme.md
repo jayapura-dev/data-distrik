@@ -13,3 +13,4 @@
  - [x] Detail Kepala Keluarga
  - [x] Detail Anggota Keluarga
  - [x] Pencarian Anggota Keluarga
+ - [x] Session Data dengan Indexing Distrik (No Auth)

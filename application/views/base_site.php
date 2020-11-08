@@ -17,16 +17,22 @@
                     <a href="<?php echo base_url()?>"> <i class="icon home"></i> Home</a>
                 </li>
                 <li class="item">
-                    <a href="<?php echo base_url()?>Penduduk/family"> <i class="icon database"></i> Data</a>
+                    <a href="<?php echo base_url()?>Penduduk/family"> <i class="icon table"></i> Data</a>
                 </li>
             
                 <div class="ui simple dropdown item">
                     API <i class="dropdown icon"></i>
                     <div class="menu">
-                        <a class="item"><i class="icon user"></i> Kepala Keluarga</a>
+                        <a href="<?php echo base_url()?>Api/kk" target="_blank" class="item"><i class="icon user"></i> Kepala Keluarga</a>
                         <a class="item"><i class="icon users"></i> Member Keluarga</a>
                     </div>
                 </div>
+                <li class="item">
+                    <a href="<?php echo base_url()?>Utility/db"> <i class="icon database"></i> Backup DB</a>
+                </li>
+                <li class="item">
+                    <a href="<?php echo base_url()?>Section"> <i class="icon cogs"></i> Setings</a>
+                </li>
             </div>
         </div>
         <?php echo $contents ?>

@@ -26,7 +26,12 @@ class Penduduk extends CI_Controller {
 
     public function create_family(){
         $data['title'] = 'Create Family';
-        $data['kampung'] = $this->db->query("SELECT * FROM tb_kampung WHERE id_distrik = 4 ")->result();
+        $id = 1;
+        $section = $this->db->get_where('tb_index_distrik', ['id_dis_index' => $id])->row_array();
+        
+        $data['id_distrik'] = $section['id_distrik'];
+        $id_distrik = $section['id_distrik'];
+        $data['kampung'] = $this->db->query("SELECT * FROM tb_kampung WHERE id_distrik = '$id_distrik' ")->result();
         $this->template->load('base_site','page/c-family',$data);
     }
 
@@ -121,8 +126,13 @@ class Penduduk extends CI_Controller {
 
     public function edit_family($id){
         $data['title'] = 'Edit Family';
+        $id_dis = 1;
+        $section = $this->db->get_where('tb_index_distrik', ['id_dis_index' => $id_dis])->row_array();
+        
+        $id_distrik = $section['id_distrik'];
+
         $data['fam'] = $this->db->get_where('tb_familiy', ['id_fam' => $id])->row_array();
-        $data['kampung'] = $this->db->query("SELECT * FROM tb_kampung WHERE id_distrik = 4 ")->result();
+        $data['kampung'] = $this->db->query("SELECT * FROM tb_kampung WHERE id_distrik = '$id_distrik' ")->result();
         $this->template->load('base_site','page/u-family',$data);
     }
 

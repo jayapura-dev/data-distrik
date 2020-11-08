@@ -3,6 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_penduduk extends CI_model{
     function get_family($name = null){
+        $get_section = $this->db->get_where('tb_index_distrik', ['id_dis_index' => 1])->row_array();
+        $id = $get_section['id_distrik'];
+
         if($name === null){
             $query = $this->db->query("SELECT 
                 tb_familiy.id_fam as id_fam,
@@ -16,6 +19,7 @@ class M_penduduk extends CI_model{
                 FROM tb_familiy 
                 LEFT JOIN tb_kampung ON tb_familiy.id_kampung = tb_kampung.id_kampung
                 LEFT JOIN tb_member ON tb_familiy.id_fam = tb_member.id_fam
+                WHERE tb_familiy.id_distrik = '$id'
                 GROUP BY tb_familiy.id_fam ");
             return $query->result();
         } else {
@@ -31,7 +35,7 @@ class M_penduduk extends CI_model{
                 FROM tb_familiy 
                 LEFT JOIN tb_kampung ON tb_familiy.id_kampung = tb_kampung.id_kampung
                 LEFT JOIN tb_member ON tb_familiy.id_fam = tb_member.id_fam
-                WHERE nama_kk LIKE '%$name%'
+                WHERE tb_familiy.id_distrik = '$id' AND nama_kk LIKE '%$name%'
                 GROUP BY tb_familiy.id_fam ");
             return $query->result();
         }

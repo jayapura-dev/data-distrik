@@ -7,4 +7,10 @@ class M_home extends CI_model{
 
         return $query->result();
     }
+
+    function update_section($where,$data,$table)
+    {
+        $this->db->where($where);
+        $this->db->update($table,$data);
+    }
 }
