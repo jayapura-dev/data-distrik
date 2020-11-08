@@ -24,10 +24,10 @@
                         <input type="hidden" name="id_fam" value="<?php echo $fam['id_fam'] ?>">
                         <input type="hidden" name="id_kampung" value="<?php echo $fam['id_kampung'] ?>">
                         <input type="hidden" name="id_distrik" value="<?php echo $fam['id_distrik'] ?>">
-                        <input type="text" name="nama" placeholder="Nama Anggota Keluarga">  
+                        <input type="text" name="nama" placeholder="Nama Anggota Keluarga" required="true">  
                     </div>
                     <div class="field">
-                        <input type="text" name="nik" placeholder="Nik Anggota Keluarga">  
+                        <input type="text" name="nik" placeholder="Nik Anggota Keluarga" required="true">  
                     </div>
                 </div>
             </div>
@@ -35,14 +35,14 @@
                 <label>Suku / Golongan Darah / Tempat Lahir / Tgl Lahir</label>
                 <div class="fields">
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="suku">
+                        <select class="ui fluid dropdown" name="suku" required="true">
                             <option value="">--- Suku ---</option>
                             <option value="OAP">OAP</option>
                             <option value="Non-OAP">Non OAP</option>
                         </select>
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="golongan_darah">
+                        <select class="ui fluid dropdown" name="golongan_darah" required="true">
                             <option value="">--- Golongan Darah ---</option>
                             <option value="A">A</option>
                             <option value="B">B</option>
@@ -51,7 +51,7 @@
                         </select>
                     </div>
                     <div class="four wide field">
-                        <input type="text" name="tempat_lahir" placeholder="Tempat Lagir (Contoh : Jayapura)" >
+                        <input type="text" name="tempat_lahir" placeholder="Tempat Lagir (Contoh : Jayapura)" required="true">
                     </div>
                     <div class="four wide field">
                         <input type="date" name="tgl_lahir" >
@@ -62,10 +62,10 @@
                 <label>Nama Ayah / Status Perkawinan / Adminduk KTP / Adminduk Akta Lahir</label>
                 <div class="fields">
                     <div class="four wide field">
-                        <input type="text" name="nama_ayah" placeholder="Nama Ayah" >
+                        <input type="text" name="nama_ayah" placeholder="Nama Ayah" required="true">
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="status_perkawinan">
+                        <select class="ui fluid dropdown" name="status_perkawinan" required="true">
                             <option value="">--- Status Perkawainan ---</option>
                             <option value="Belum kawin">Belum Kawin</option>
                             <option value="Kawin">Kawin</option>
@@ -74,14 +74,14 @@
                         </select>
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="adminduk_ktp">
+                        <select class="ui fluid dropdown" name="adminduk_ktp" required="true">
                             <option value="">--- Adminduk KTP ---</option>
                             <option value="Ya">Ya</option>
                             <option value="Tidak">Tidak</option>
                         </select>
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="adminduk_akta_lahir">
+                        <select class="ui fluid dropdown" name="adminduk_akta_lahir" required="true">
                             <option value="">--- Adminduk Akta Lahir ---</option>
                             <option value="Ya">Ya</option>
                             <option value="Tidak">Tidak</option>
@@ -93,7 +93,7 @@
                 <label>Pekerjaan / Ijazah Terahir / Agama </label>
                 <div class="fields">
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="pekerjaan">
+                        <select class="ui fluid dropdown" name="pekerjaan" required="true">
                             <option value="">--- Pekerjaan ---</option>
                             <option value="Tidak bekerja">Tidak Bekerja</option>
                             <option value="Petani">Petani</option>
@@ -105,7 +105,7 @@
                         </select>
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="ijazah_terahir">
+                        <select class="ui fluid dropdown" name="ijazah_terahir" required="true">
                             <option value="">--- Ijazah Terahir ---</option>
                             <option value="Tidak punya ijazah">Tidak Punya ijazah</option>
                             <option value="SD/sederajat">SD/Sederajat</option>
@@ -115,8 +115,9 @@
                         </select>
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="partisipasi_sekolah">
+                        <select class="ui fluid dropdown" name="partisipasi_sekolah" required="true">
                             <option value="">--- Partisipasi Sekolah ---</option>
+                            <option value="Belum bersekolah">Belum Bersekolah</option>
                             <option value="Masih bersekolah">Masih Bersekolah</option>
                             <option value="Tidak bersekolah lagi">Tidak bersekolah lagi</option>
                         </select>
@@ -127,7 +128,7 @@
                 <label>Hubungan dengan Kepala Keluarga / Agama </label>
                 <div class="fields">
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="hub_kk">
+                        <select class="ui fluid dropdown" name="hub_kk" required="true">
                             <option value="">--- Hubungan dengan Kepala Keluarga ---</option>
                             <option value="Ayah">Ayah</option>
                             <option value="Ibu">Ibu</option>
@@ -138,7 +139,7 @@
                         </select>
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="agama">
+                        <select class="ui fluid dropdown" name="agama" required="true">
                             <option value="">--- Agama ---</option>
                             <option value="Islam">Islam</option>
                             <option value="Katholik">Khatolik</option>

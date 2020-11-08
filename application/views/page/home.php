@@ -7,7 +7,7 @@
     <br />
     <br />
 
-    <form class="ui massive form">
+    <form class="ui massive form" method="GET" action="<?php echo base_url()?>Penduduk/result">
         <div class="field">
             <label></label>
             <div class="one fields">

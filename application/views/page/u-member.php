@@ -14,10 +14,10 @@
                         <input type="hidden" name="id_fam" value="<?php echo $member['id_fam'] ?>">
                         <input type="hidden" name="id_kampung" value="<?php echo $member['id_kampung'] ?>">
                         <input type="hidden" name="id_distrik" value="<?php echo $member['id_distrik'] ?>">
-                        <input type="text" name="nama" value="<?php echo $member['nama'] ?>" placeholder="Nama Anggota Keluarga">  
+                        <input type="text" name="nama" value="<?php echo $member['nama'] ?>" required="true" placeholder="Nama Anggota Keluarga">  
                     </div>
                     <div class="field">
-                        <input type="text" name="nik" value="<?php echo $member['nik'] ?>" placeholder="Nik Anggota Keluarga">  
+                        <input type="text" name="nik" value="<?php echo $member['nik'] ?>" required="true" placeholder="Nik Anggota Keluarga">  
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                 <label>Suku / Golongan Darah / Tempat Lahir / Tgl Lahir</label>
                 <div class="fields">
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="suku">
+                        <select class="ui fluid dropdown" name="suku" required="true">
                             <option value="<?php echo $member['suku'] ?>"><?php echo $member['suku'] ?></option>
                             <option value="">--- Suku ---</option>
                             <option value="OAP">OAP</option>
@@ -33,7 +33,7 @@
                         </select>
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="golongan_darah">
+                        <select class="ui fluid dropdown" name="golongan_darah" required="true">
                             <option value="<?php echo $member['golongan_darah'] ?>"><?php echo $member['golongan_darah'] ?></option>
                             <option value="">--- Golongan Darah ---</option>
                             <option value="A">A</option>
@@ -43,10 +43,10 @@
                         </select>
                     </div>
                     <div class="four wide field">
-                        <input type="text" name="tempat_lahir" value="<?php echo $member['tempat_lahir'] ?>" placeholder="Tempat Lagir (Contoh : Jayapura)" >
+                        <input type="text" name="tempat_lahir" value="<?php echo $member['tempat_lahir'] ?>" required="true" placeholder="Tempat Lagir (Contoh : Jayapura)" >
                     </div>
                     <div class="four wide field">
-                        <input type="date" name="tgl_lahir" value="<?php echo $member['tgl_lahir'] ?>" >
+                        <input type="date" name="tgl_lahir" value="<?php echo $member['tgl_lahir'] ?>" required="true" >
                     </div>
                 </div>
             </div>
@@ -54,10 +54,10 @@
                 <label>Nama Ayah / Status Perkawinan / Adminduk KTP / Adminduk Akta Lahir</label>
                 <div class="fields">
                     <div class="four wide field">
-                        <input type="text" name="nama_ayah" value="<?php echo $member['nama_ayah'] ?>" placeholder="Nama Ayah" >
+                        <input type="text" name="nama_ayah" value="<?php echo $member['nama_ayah'] ?>" required="true" placeholder="Nama Ayah" >
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="status_perkawinan">
+                        <select class="ui fluid dropdown" name="status_perkawinan" required="true">
                             <option value="<?php echo $member['status_perkawinan'] ?>"><?php echo $member['status_perkawinan'] ?></option>
                             <option value="">--- Status Perkawainan ---</option>
                             <option value="Belum kawin">Belum Kawin</option>
@@ -67,7 +67,7 @@
                         </select>
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="adminduk_ktp">
+                        <select class="ui fluid dropdown" name="adminduk_ktp" required="true">
                             <option value="<?php echo $member['adminduk_ktp'] ?>"><?php echo $member['adminduk_ktp'] ?></option>
                             <option value="">--- Adminduk KTP ---</option>
                             <option value="Ya">Ya</option>
@@ -75,7 +75,7 @@
                         </select>
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="adminduk_akta_lahir">
+                        <select class="ui fluid dropdown" name="adminduk_akta_lahir" required="true">
                             <option value="<?php echo $member['adminduk_akta_lahir'] ?>"><?php echo $member['adminduk_akta_lahir'] ?></option>
                             <option value="">--- Adminduk Akta Lahir ---</option>
                             <option value="Ya">Ya</option>
@@ -88,7 +88,7 @@
                 <label>Pekerjaan / Ijazah Terahir / Agama </label>
                 <div class="fields">
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="pekerjaan">
+                        <select class="ui fluid dropdown" name="pekerjaan" required="true">
                             <option value="<?php echo $member['pekerjaan'] ?>"><?php echo $member['pekerjaan'] ?></option>
                             <option value="">--- Pekerjaan ---</option>
                             <option value="Tidak bekerja">Tidak Bekerja</option>
@@ -101,7 +101,7 @@
                         </select>
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="ijazah_terahir">
+                        <select class="ui fluid dropdown" name="ijazah_terahir" required="true">
                             <option value="<?php echo $member['ijazah_terahir'] ?>"><?php echo $member['ijazah_terahir'] ?></option>
                             <option value="">--- Ijazah Terahir ---</option>
                             <option value="Tidak punya ijazah">Tidak Punya ijazah</option>
@@ -112,7 +112,7 @@
                         </select>
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="partisipasi_sekolah">
+                        <select class="ui fluid dropdown" name="partisipasi_sekolah" required="true">
                             <option value="<?php echo $member['partisipasi_sekolah'] ?>"><?php echo $member['partisipasi_sekolah'] ?></option>
                             <option value="">--- Partisipasi Sekolah ---</option>
                             <option value="Masih bersekolah">Masih Bersekolah</option>
@@ -125,11 +125,12 @@
                 <label>Hubungan dengan Kepala Keluarga / Agama </label>
                 <div class="fields">
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="hub_kk">
+                        <select class="ui fluid dropdown" name="hub_kk" required="true">
                             <option value="<?php echo $member['hub_kk'] ?>"><?php echo $member['hub_kk'] ?></option>
                             <option value="">--- Hubungan dengan Kepala Keluarga ---</option>
                             <option value="Ayah">Ayah</option>
                             <option value="Ibu">Ibu</option>
+                            <option value="Istri">Istri</option>
                             <option value="Anak">Anak</option>
                             <option value="Nenek">Nenek</option>
                             <option value="Kakek">Kakek</option>
@@ -137,7 +138,7 @@
                         </select>
                     </div>
                     <div class="four wide field">
-                        <select class="ui fluid dropdown" name="agama">
+                        <select class="ui fluid dropdown" name="agama" required="true">
                             <option value="<?php echo $member['agama'] ?>"><?php echo $member['agama'] ?></option>
                             <option value="">--- Agama ---</option>
                             <option value="Islam">Islam</option>
@@ -151,7 +152,7 @@
                 </div>
 
                 <input type="submit" value="Simpan" class="ui button" tabindex="0" />
-                <a href="<?php echo base_url()?>Penduduk/family" class="ui button" >Batal</a>
+                <a href="<?php echo base_url()?>Penduduk/member/<?php echo $member['id_fam'] ?>" class="ui button" >Batal</a>
             </div>
         </form>
     </div>

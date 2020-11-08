@@ -72,4 +72,8 @@ class M_penduduk extends CI_model{
         $this->db->where($where);
         $this->db->update($table,$data);
     }
+
+    function delete_member($where = 0){
+        $this->db->delete('tb_member', array('id_member' => $where));
+    }
 }

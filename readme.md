@@ -10,3 +10,6 @@
  - [x] Data Kepala Keluarga
  - [x] Data Member Keluarga
  - [x] API Resource untuk Data Kepala Keluarga dan Member
+ - [x] Detail Kepala Keluarga
+ - [x] Detail Anggota Keluarga
+ - [x] Pencarian Anggota Keluarga

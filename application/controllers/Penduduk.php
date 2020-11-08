@@ -5,7 +5,7 @@ class Penduduk extends CI_Controller {
     function  __construct()
     {
         parent::__construct();
-        $this->load->model('M_penduduk');
+        $this->load->model(array('M_penduduk', 'M_home'));
     }
 
     public function index(){
@@ -412,5 +412,51 @@ class Penduduk extends CI_Controller {
               $id = $id_fam;
               redirect('Penduduk/member/'.$id.'');
         }
+    }
+
+    public function delete_member($id){
+        $data['title'] = 'Hapus data Kepala Keluarga';
+        $data['member'] = $this->db->get_where('tb_member', ['id_member' => $id])->row_array();
+        $get_fam = $this->db->get_where('tb_member', ['id_member' => $id])->row_array();
+        $id_fam = $get_fam['id_fam'];
+        $data['fam'] = $this->db->get_where('tb_familiy', ['id_fam' => $id_fam])->row_array();
+
+        $this->template->load('base_site','page/d-member', $data);
+    }
+
+    function delete_member_post(){
+        $id_member = $this->input->post('id_member');
+        $id = $this->input->post('id_fam');
+
+        $this->M_penduduk->delete_member($id_member);
+        $this->session->set_flashdata(
+            "delete",
+            "<div class='ui positive message'>
+                <i class='close icon'></i>
+                <div class='header'>
+                    Success,  Data Telah Dihapus !!
+                </div>
+            </div>"
+          );
+
+          redirect('Penduduk/member/'.$id.'');
+    }
+
+    public function result($nama = 0){
+        $data['title'] = 'Pencarian';
+        $nama = $this->input->get('nama');
+        $data['result'] = $this->M_home->cari_data($nama);
+        $data['nama'] = $nama;
+        $this->template->load('base_site','page/cari', $data);
+    }
+
+    public function detail_member($id){
+        $data['title'] = 'Detail Anggota Keluarga';
+        $data['member'] = $this->db->get_where('tb_member', ['id_member' => $id])->row_array();
+        $get_fam = $this->db->get_where('tb_member', ['id_member' => $id])->row_array();
+        $id_fam = $get_fam['id_fam'];
+        $data['fam'] = $this->db->get_where('tb_familiy', ['id_fam' => $id_fam])->row_array();
+
+        $this->template->load('base_site','page/detail-mem', $data);
     }
 }

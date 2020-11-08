@@ -59,9 +59,9 @@
                     <td><?php echo $item->golongan_darah ?></td>
                     <td><?php echo $item->tgl_lahir ?></td>
                     <td class="ui center aligned">
-                        <a href="#" class="ui success label" title="Detail"><i class="icon file alternate"></i></a>
+                        <a href="<?php echo base_url()?>Penduduk/detail_member/<?php echo $item->id_member ?>" class="ui success label" title="Detail"><i class="icon file alternate"></i></a>
                         <a href="<?php echo base_url()?>Penduduk/edit_member/<?php echo $item->id_member ?>" class="ui blue label" title="Edit"><i class="icon edit"></i></a>
-                        <a href="#" class="ui red label" title="Hapus"><i class="icon trash"></i></a>
+                        <a href="<?php echo base_url()?>Penduduk/delete_member/<?php echo $item->id_member ?>" class="ui red label" title="Hapus"><i class="icon trash"></i></a>
                     </td>
                 </tr>
                 <?php } ?>
