@@ -132,6 +132,7 @@
                             <option value="">--- Hubungan dengan Kepala Keluarga ---</option>
                             <option value="Ayah">Ayah</option>
                             <option value="Ibu">Ibu</option>
+                            <option value="Istri">Istri</option>
                             <option value="Anak">Anak</option>
                             <option value="Nenek">Nenek</option>
                             <option value="Kakek">Kakek</option>

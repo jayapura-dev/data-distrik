@@ -68,13 +68,16 @@
                     </div>
                     <div class="four wide field">
                         <select class="ui fluid dropdown" name="penguasaan_bangunan" required="true">
+                            <option value="">--- Penguasaan Bangunanan ---</option>
                             <option value="Milik Sendiri">Milik Sendiri</option>
                             <option value="Milik Pemerintah">Milik Pemerintah</option>
                         </select>
                     </div>
                     <div class="four wide field">
                         <select class="ui fluid dropdown" name="status_lahan" required="true">
+                            <option value="">--- Status Lahan ---</option>
                             <option value="Milik Sendiri">Milik Sendiri</option>
+                            <option value="Milik Pemerintah">Milik Pemerintah</option>
                         </select>
                     </div>
                 </div>
@@ -91,6 +94,7 @@
                     <div class="six wide field">
                         <select class="ui fluid dropdown" name="jenis_lantai" required="true">
                             <option value="">--- Jenis Lantai ---</option>
+                            <option value="papan">Papan</option>
                             <option value="semen">Semen</option>
                             <option value="tanah">Tanah</option>
                             <option value="keramik">Keramik</option>
@@ -115,6 +119,7 @@
                             <option value="">--- Jenis Dinding ---</option>
                             <option value="tembok">Tembok</option>
                             <option value="gabah">Gabah</option>
+                            <option value="papan">Papan</option>
                         </select>
                     </div>
                     <div class="six wide field">
@@ -167,6 +172,7 @@
                             <option value="Sumur bor">Sumur Bor</option>
                             <option value="Danau">Danau</option>
                             <option value="Kali">Kali</option>
+                            <option value="Sungai">Sungai</option>
                         </select>
                     </div>
                     <div class="six wide field">
@@ -198,6 +204,8 @@
                             <option value="Tidak ada Listrik">Tidak ada Listrik</option>
                             <option value="Generator">Generator</option>
                             <option value="Genset">Genset</option>
+                            <option value="PLTS">PLTS</option>
+                            <option value="PLTA">PLTA</option>
                         </select>
                     </div>
                     <div class="six wide field">
@@ -231,8 +239,6 @@
                             <option value="">--- Fasilitas Buang Air ---</option>
                             <option value="Sendiri">Sendiri</option>
                             <option value="Bersama">Bersama</option>
-                            <option value="Generator">Generator</option>
-                            <option value="Genset">Genset</option>
                         </select>
                     </div>
                     <div class="six wide field">
