@@ -113,4 +113,49 @@ class Api extends REST_Controller {
             }
         }
     }
+
+    function member_get(){
+        $result = $this->M_api->get_member();
+        $countResult = count($result);
+
+        if($countResult != null) {
+            foreach($result as $item){
+                $post[] = array(
+                    'id'        => $item->id_member,
+                    'survey_family_id' => $item->id_fam,
+                    'village_id'=> null,
+                    'no_urut'   => null,
+                    'nama'      => $item->nama,
+                    'nik'       => $item->nik,
+                    'suku'      => $item->suku,
+                    'golongan_darah'   => $item->golongan_darah,
+                    'tempat_lahir'     => $item->tempat_lahir,
+                    'tanggal_lahir'    => $item->tgl_lahir,
+                    'nama_ayah' => $item->nama_ayah,
+                    'adminduk_akta_lahir' => $item->adminduk_akta_lahir,
+                    'status_perkawinan'=> $item->status_perkawinan,
+                    'adminduk_ktp'     => $item->adminduk_ktp,
+                    'partisipasi_sekolah' => $item->partisipasi_sekolah,
+                    'ijazah_tertinggi' => $item->ijazah_terahir,
+                    'pekerjaan' => $item->pekerjaan,
+                    'agama'     => $item->agama,
+                    'hubungan_dengan_kepala_keluarga' => $item->hub_kk,
+                    'city_id'   => null,
+                    'district_id'=> null
+                );
+            }
+
+            $this->response([
+                'status'   => true,
+                'message'  => 'Data Ditemukan',
+                'length'   => count($post),
+                'result'   => $post
+            ], REST_Controller::HTTP_OK);
+        } else {
+            $this->response([
+                'status'   => false,
+                'message'  => 'Data Tidak Ditemukan',
+            ], REST_Controller::HTTP_NOT_FOUND);
+        }
+    }
 }

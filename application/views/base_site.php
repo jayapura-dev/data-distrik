@@ -3,7 +3,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title ?></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/jsdeliver-semantic.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>icon.css">
+    <!--<link rel="stylesheet" href="<?php echo base_url()?>assets/icon/icofont/css/icofont.css">!-->
+    <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />!-->
     <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/images/logo-jdev.png" />
 </head>
 <body>
@@ -24,7 +27,7 @@
                     API <i class="dropdown icon"></i>
                     <div class="menu">
                         <a href="<?php echo base_url()?>Api/kk" target="_blank" class="item"><i class="icon user"></i> Kepala Keluarga</a>
-                        <a class="item"><i class="icon users"></i> Member Keluarga</a>
+                        <a href="<?php echo base_url()?>Api/member" target="_blank" class="item"><i class="icon users"></i> Member Keluarga</a>
                     </div>
                 </div>
                 <li class="item">
@@ -38,7 +41,7 @@
         <?php echo $contents ?>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <!--<script src="<?php echo base_url()?>assets/js/semantic-min.js"></script>!-->
 </body>
 </html>
 

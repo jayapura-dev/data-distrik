@@ -81,4 +81,9 @@ class M_api extends CI_model{
             return $query->result();
         }
     }
+
+    function get_member(){
+        $query = $this->db->query("SELECT * FROM tb_member");
+        return $query->result();
+    }
 }
