@@ -3,7 +3,14 @@
 <br />
 <div class="ui container">
     <div class="ui segment">
-        <h4 class="ui dividing header"> <i class="icon clipboard list"></i> Session Saat ini :</h4>
+        <div class="ui breadcrumb">
+            <a href="<?php echo base_url()?>" class="section">Home</a>
+            <i class="right chevron icon divider"></i>
+            <div class="active section">Settings</div>
+        </div>
+    </div>
+    <div class="ui segment">
+        <h4 class="ui dividing header"> <i class="icon edit"></i>Ganti Section :</h4>
         <form class="ui form" method="post" action="<?php echo base_url()?>Section/update_section">
             <div class="field">
                 <div class="four wide field">
