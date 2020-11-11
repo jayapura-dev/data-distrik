@@ -9,6 +9,7 @@
                     <img class="ui avatar image" src="<?php echo base_url()?>assets/images/icon-online.png" alt="online">
                     <div class="content">
                         <label class="ui green label">INTERNET SEDANG AKTIF</label>
+                        <a class="ui green label"><i class="icon database"></i> Sync data</a>
                     </div>
                 </div>
             </div>
