@@ -2,11 +2,21 @@
 <br />
 <br />
 <div class="ui container">
+    <?php if($status == true){?>
+        <div class="ui segment" id="segment_internet">
+            <div class="ui list">
+                <div class="item">
+                    <img class="ui avatar image" src="<?php echo base_url()?>assets/images/icon-online.png" alt="online">
+                    <div class="content">
+                        <label class="ui green label">INTERNET SEDANG AKTIF</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
     <img class="ui centered huge image" src="<?php echo base_url()?>assets/images/tools-logo.png" alt="">
     <br />
-    <br />
-    <br />
-
+    
     <form class="ui massive form" method="GET" action="<?php echo base_url()?>Penduduk/result">
         <div class="field">
             <label></label>
@@ -19,3 +29,15 @@
         </div>
     </form>
 </div>
+
+<script src="<?php echo base_url()?>assets/js/jquery-1.11.3.min.js"></script>
+
+<script>
+    
+    function internet(status)
+    {
+        var status = $('#status_internet').val(status);
+        $('#segment_internet').prop('hidden', status != false);
+    }
+    
+</script>
