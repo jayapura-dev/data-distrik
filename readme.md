@@ -12,7 +12,13 @@
  - Tools ini Open Source, yang ingin berkontribusi silahkan.. ^_^
  - Jika ada masukan silahkan Membuat issues..
 
-## Fitur :
+## Dekstop Version :
+ - Tools ini Memiliki Versi Dekstop yang dapat dirunning dengan extension .exe 
+ - Dekstop dikembangkan dengan frame *electron* base *NodeJS*.
+ - Masih Perlu Pengembangan Kedepan.
+ - [Repositori Dekstop App Disni](https://github.com/Ekhel/tools-distrik)
+
+## Fitur Tersedia saat ini :
  - [x] Data Kepala Keluarga
  - [x] Data Member Keluarga
  - [x] API Resource untuk Data Kepala Keluarga dan Member
@@ -20,3 +26,9 @@
  - [x] Detail Anggota Keluarga
  - [x] Pencarian Anggota Keluarga
  - [x] Session Data dengan Indexing Distrik (No Auth)
+ - [x] Backup Database dan File
+
+## Fitur Yang akan ditambahkan di versi kedepan :
+ - [x] temuka Jalur dan Sync Data Ketika Applikasi Mendekteksi Internet
+ - [x] otomatis Mengirim Data by API ke Server Simfoi (jika Internet terdeteksi)
+ - [x] Penambahan Beberapa Data Terkait Data kesehatan Masyarakat.
